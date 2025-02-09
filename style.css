@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Define CSS variables in :root */
+
+:root {
+    --background-color: #f4f4f9;
+    --container-background: #fff;
+    --text-color: #333;
+    --secondary-text-color: #555;
+    --tertiary-text-color: #777;
+    --primary-button-color: #007bff;
+    --primary-button-hover-color: #0056b3;
+    --reset-button-color: #dc3545;
+    --reset-button-hover-color: #c82333;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 500;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-weight: var(--font-weight-normal);
+}
+
+#container {
+    width: 90vw;
+    max-width: 800px;
+    max-height: 90vh;
+    padding: 20px;
+    gap: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    background-color: var(--container-background);
+}
+
+/* game section */
+#game {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#display {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.data {
+    flex: 1 1;
+    text-align: center;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+}
+
+.player {
+    font-size: 18px;
+    color: var(--secondary-text-color);
+}
+
+.winrate, .action {
+    font-size: 16px;
+    color: var(--tertiary-text-color);
+}
+
+#state {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+#actions {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#actions button, #reset {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    width: 120px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+}
+
+#actions button {
+    background-color: var(--primary-button-color);
+}
+
+#actions button:hover {
+    background-color: var(--primary-button-hover-color);
+}
+
+#reset {
+    background-color: var(--reset-button-color);
+}
+
+#reset:hover {
+    background-color: var(--reset-button-hover-color);
+}
+
+/* info section */
+#info {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#game-description h1, #how-to-play h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: var(--font-weight-bold);
+}
+
+#game-description ul, #how-to-play ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#game-description li, #how-to-play li {
+    font-size: 16px;
+    color: var(--secondary-text-color);
+}
+
+/* responsive design */
+@media (max-width: 480px) {
+    #display {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #actions button, #reset {
+        width: 50%;
+        font-size: 14px;
+    }
+}

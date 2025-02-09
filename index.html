@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>rock paper scissors</title>
+</head>
+<body>
+    <div id="container">
+        <div id="game">
+            <div id="display">
+                <div class="data">
+                    <p class="score">0</p>
+                    <p class="player">you</p>
+                    <p class="winrate">-</p>
+                    <p class="action">-</p>
+                </div>
+
+                <div class="data">
+                    <p class="score">0</p>
+                    <p class="player">tie</p>
+                    <p class="winrate">-</p>
+                </div>
+
+                <div class="data">
+                    <p class="score">0</p>
+                    <p class="player">bot</p>
+                    <p class="winrate">-</p>
+                    <p class="action">-</p>
+                </div>
+            </div>
+
+            <h1 id="state">make an action</h1>
+
+            <div id="actions">
+                <button id="rock">rock</button>
+                <button id="paper">paper</button>
+                <button id="scissors">scissors</button>
+            </div>
+
+            <button id="reset">reset</button>
+        </div>
+
+        <div id="info">
+            <div id="game-description">
+                <h1>what is this?</h1>
+                <ul>
+                    <li>a rock paper scissors game by me</li>
+                    <li>but you play against a bot that will gradually adapt to your moves as you play</li>
+                    <li>built using brain.js</li>
+                </ul>
+            </div>
+
+            <div id="how-to-play">
+                <h1>how do i play?</h1>
+                <ul>
+                    <li>start the game by choosing one of the three actions</li>
+                    <li>the bot will recognize your patterns and learn</li>
+                    <li>realize that you will lose ツ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/brain.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
