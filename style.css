@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* Define CSS variables in :root */
-
 :root {
     --background-color: #f4f4f9;
     --container-background: #fff;
